@@ -1,0 +1,10 @@
+export type Priority = 'Critical' | 'High' | 'Medium' | 'Low';
+export type TaskStatus = 'Not Started' | 'In Progress' | 'Under Review' | 'Completed';
+export type Task = { id: string; title: string; description: string; assignee: string; assignees?: string[]; department: string; priority: Priority; status: TaskStatus; dueDate: string; createdAt: string };
+export type LogEntry = { id: string; title: string; category: string; details: string; date: string; author: string };
+export type ChecklistItem = { id: string; title: string; done: boolean; category: string };
+export type Sponsor = { id: string; company: string; contact: string; email: string; amount: number; status: string; followUp: string; notes: string };
+export type Transaction = { id: string; title: string; category: string; amount: number; type: 'Income' | 'Expense'; date: string };
+export type Post = { id: string; title: string; channel: string; date: string; status: string; notes: string };
+export type SocialAccount = { id: string; platform: string; handle: string; url: string };
+export type AppData = { tasks: Task[]; engineering: LogEntry[]; manufacturing: ChecklistItem[]; portfolio: ChecklistItem[]; competition: ChecklistItem[]; sponsors: Sponsor[]; transactions: Transaction[]; posts: Post[]; socialAccounts: SocialAccount[]; announcements: string[]; budget: number; regionalsDate: string };
